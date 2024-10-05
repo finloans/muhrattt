@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ODIA NANA(odianna) 2024-25 - Property Registration Muhurat</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            background-color: rgba(235,168,81,1.00);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            font-weight: bold;
+                 }
+        h1 span {
+            font-weight: bold;
+        }
+        /* Style for different colored letters in ODIA 	NANA(odianna) 2024-25*/
+        .O { color: red; }
+        .D { color: blue; }
+        .I { color: green; }
+        .A { color: white; }
+        .N1 { color: purple; }
+        .N2 { color: teal; }
+       .N3 { color: magneta; }
+        .N4{ color:blue ; }
+        .N5{ color:lime ; }
+        .N6{ color:red; }
+        .tabs {
+            display: flex;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .tabs button {
+            flex: 1;
+            padding: 10px;
+            cursor: pointer;
+            background-color: #f4f4f4;
+            border: 1px solid #ccc;
+            border-radius: 5px 5px 0 0;
+        }
+        .tabs button.active {
+            background-color: #28a745;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-top: none;
+            border-radius: 0 0 5px 5px;
+            background-color: #fff;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .form-group button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background-color: #218838;
+        }
+        .result, .month-result {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            border: 2px solid #28a745;
+            color: #333;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <h1><span class="O">O</span><span class="D">D</span><span class="I">I</span><span class="A">A</span> <span class="N1">N</span><span class="N2">A</span><span class="N3">N</span><span class="N4">A</span><span class="N5">(odianna)</span> <span class="N6">2024-25</span> - Property Registration Muhurat</h1>
+
+        <!-- Tabs for navigation -->
+        <div class="tabs">
+            <button class="tab-link active" onclick="openTab(event, 'form-tab')">Muhurat Finder</button>
+            <button class="tab-link" onclick="openTab(event, 'tips-tab')">Our Tips</button>
+            <button class="tab-link" onclick="openTab(event, 'faq-tab')">FAQ</button>
+        </div>
+
+        <!-- Tab Contents -->
+        <div id="form-tab" class="tab-content active">
+            <!-- Form for Name, DOB, Time of Birth, Place of Birth, Zodiac Sign -->
+            <form id="muhuratForm">
+                <div class="form-group">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+                <div class="form-group">
+                    <label for="time">Time of Birth:</label>
+                    <input type="time" id="time" name="time" required>
+                </div>
+                <div class="form-group">
+                    <label for="location">Place of Birth:</label>
+                    <input type="text" id="location" name="location" placeholder="City/Country" required>
+                </div>
+                <div class="form-group">
+                    <label for="zodiac">Zodiac Sign:</label>
+                    <select id="zodiac" name="zodiac" required>
+                        <option value="Aries">Aries</option>
+                        <option value="Taurus">Taurus</option>
+                        <option value="Gemini">Gemini</option>
+                        <option value="Cancer">Cancer</option>
+                        <option value="Leo">Leo</option>
+                        <option value="Virgo">Virgo</option>
+                        <option value="Libra">Libra</option>
+                        <option value="Scorpio">Scorpio</option>
+                        <option value="Sagittarius">Sagittarius</option>
+                        <option value="Capricorn">Capricorn</option>
+                        <option value="Aquarius">Aquarius</option>
+                        <option value="Pisces">Pisces</option>
+                    </select>
+                </div>
+
+                <!-- Dropdown for Months -->
+                <div class="form-group">
+                    <label for="month-select">Select Month to View Auspicious Muhurat:</label>
+                    <select id="month-select" name="month">
+                        <option value="October">October</option>
+                        <option value="November">November</option>
+                        <option value="December">December</option>
+                        <option value="January">January</option>
+                        <option value="February">February</option>
+                        <option value="March">March</option>
+                        <option value="April">April</option>
+                        <option value="May">May</option>
+                        <option value="June">June</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit">Find Best Muhurat</button>
+                </div>
+            </form>
+
+            <div id="month-result" class="month-result"></div>
+        </div>
+
+         <!-- Tips Content -->
+        <div id="tips-tab" class="tab-content">
+            <h2>When should you avoid going for property registration?</h2>
+            <p>Saturdays and Tuesdays must be avoided for purchasing a property. Rahukaal, which occurs at a specific time every day, is considered inauspicious for activities such as Griha Pravesh, property registration, etc. Vishti Karan or Bhadra is considered inauspicious and should be avoided.</p>
+            <p>When the moon is present in the 4th, 8th, and 12th position from one’s rashi on a particular day, property registration should be avoided. Panchak, which is the five days’ period when the moon moves through the zodiac signs of Aquarius and Pisces, must be avoided.</p>
+            <h2>How to choose tithi for land registration?</h2>
+            <p>According to astrology, tithi refers to a lunar day. There are a total of 30 tithis in Krishna Paksha (moon’s waning phase) and Shukla Paksha (moon’s waxing phase). The auspicious tithi for property registration will depend on the month and other factors.</p>
+            <h2>What is a good day to sign a property agreement?</h2>
+            <p>Auspicious nakshatras to sign an agreement are Pushya, Anuradha, and Purva Phalguni. The auspicious days to sign an agreement are Monday, Wednesday, Thursday, and Friday. One should avoid rikta tithis such as the fourth, ninth, fourteenth, fifteenth, and thirtieth.</p>
+            <h2>What to do if you cannot find an auspicious date for property registration?</h2>
+            <p>If unable to find a suitable date, experts recommend ensuring that at least an auspicious nakshatra prevails with an auspicious weekday. Consult an expert to find the best muhurat based on your horoscope.</p>
+<h3>Additional Tips</h3>
+        <p><strong>1. Consider Panchang Shuddhi:</strong> Ensure that the selected date for property registration aligns with Panchang Shuddhi, which considers auspiciousness based on the Hindu calendar. The Panchang analyzes Tithi (lunar day), Nakshatra (constellation), and Yogas (planetary combinations) to avoid any inauspicious timings.</p>
+    
+    <p><strong>2. Shukra and Guru Tara:</strong> Ensure that Shukra Tara (Venus) and Guru Tara (Jupiter) are not in a set or retrograde state. If either of these planets is set (Tara Asta), it is traditionally considered inauspicious for property-related activities, including registration.</p>
+    
+    <p><strong>3. Avoid Inauspicious Times:</strong> Amavasya (New Moon Day) and Purnima (Full Moon Day) are typically avoided for property transactions. Also, avoid Rahukalam and Yamagandam, as these periods are deemed inauspicious. Days during lunar or solar eclipses should also be avoided.</p>
+
+    <p><strong>4. Day Selection:</strong> Certain days, such as Tuesday and Saturday, are traditionally avoided for property registration. The most favorable days include Monday, Wednesday, Thursday, and Friday.</p>
+    
+    <p><strong>5. Nakshatras for Property Registration:</strong> Auspicious Nakshatras like Rohini, Uttarashada, Uttaraphalguni, Uttara Bhadrapada, Swati, and Dhanishta are considered ideal for property-related activities.</p>
+    
+    <p><strong>6. Lagna (Ascendant) Consideration:</strong> The Muhurat should also be aligned with a favorable Lagna (ascendant) for the individual. This ensures that planetary influences are positive for the buyer or property owner.</p>
+
+    <p><strong>7. Location-Based Timing:</strong> Ensure that the selected Muhurat is tailored to the location (city or region) where the property registration will take place, as time zones and local astrological influences vary.</p>
+    
+    <p><strong>8. Consult an Expert:</strong> It is always advisable to consult a qualified astrologer to choose the perfect Muhurat for property registration based on your individual horoscope and planetary positions.</p>
+</div>
+
+        <!-- FAQ Content -->
+        <div id="faq-tab" class="tab-content">
+            <h2>FAQs</h2>
+            <p><strong>Are auspicious days to buy a house the same as those for Griha Pravesh?</strong></p>
+            <p>No, the auspicious dates for buying a new property and Griha Pravesh may differ.</p>
+
+            <p><strong>Is Amavasya good for house registration?</strong></p>
+            <p>Amavasya is not generally considered ideal for auspicious events such as property registration. However, one can refer to a Hindu Panchang for the specific muhurat.</p>
+
+            <p><strong>Can you register property outside the auspicious muhurat?</strong></p>
+            <p>Yes, consult an astrology and Vastu expert to find alternative timings if required.</p>
+
+            <p><strong>Can we do registration on Ashtami?</strong></p>
+            <p>Ashtami and Navami of Chaitra Navratri are auspicious for starting new work. Refer to the Hindu calendar for specifics.</p>
+
+            <p><strong>Can we buy property on Saturday or Sunday?</strong></p>
+            <p>Saturday is generally not auspicious. Sunday is okay, but consult an astrologer to know the exact time.</p>
+        </div>
+    </div>
+
+
+
+    <script>
+        // Muhurat data for each month
+        const muhuratData = {
+             October: [
+                    { date: "October 10, 2024", muhurat: "06:19 AM to 05:41 AM, Oct 11", nakshatra: "Purva Ashadha" },
+                    { date: "October 17, 2024", muhurat: "06:23 AM to 04:20 PM", nakshatra: "Revati" },
+                    { date: "October 25, 2024", muhurat: "07:40 AM to 06:29 AM, Oct 26", nakshatra: "Ashlesha" }
+                ],
+                November: [
+                    { date: "November 1, 2024", muhurat: "03:31 AM to 06:34 AM, Nov 02", nakshatra: "Vishakha" },
+                    { date: "November 7, 2024", muhurat: "06:38 AM to 11:47 AM", nakshatra: "Purva Ashadha" },
+                    { date: "November 21, 2024", muhurat: "03:35 PM to 06:50 AM, Nov 22", nakshatra: "Ashlesha" },
+                    { date: "November 29, 2024", muhurat: "10:18 AM to 06:56 AM, Nov 30", nakshatra: "Vishakha" }
+                ],
+                December: [
+                    { date: "December 19, 2024", muhurat: "07:09 AM to 07:09 AM, Dec 20", nakshatra: "Ashlesha" },
+                    { date: "December 26, 2024", muhurat: "06:09 PM to 07:12 AM, Dec 27", nakshatra: "Vishakha" },
+                    { date: "December 27, 2024", muhurat: "07:12 AM to 07:13 AM, Dec 28", nakshatra: "Vishakha" }
+                ],
+                January: [
+                    { date: "January 16, 2025", muhurat: "07:15 AM to 07:15 AM, Jan 17", nakshatra: "Ashlesha" },
+                    { date: "January 17, 2025", muhurat: "07:15 AM to 07:15 AM, Jan 18", nakshatra: "Magha" },
+                    { date: "January 23, 2025", muhurat: "07:13 AM to 07:13 AM, Jan 24", nakshatra: "Vishakha" },
+                    { date: "January 24, 2025", muhurat: "07:13 AM to 07:07 AM, Jan 25", nakshatra: "Anuradha" }
+                ],
+                February: [
+                    { date: "February 7, 2025", muhurat: "06:40 PM to 07:95 AM, Feb 8", nakshatra: "Mrigashirsha" },
+                    { date: "February 13, 2025", muhurat: "07:01 AM to 07:00 AM, Feb 14", nakshatra: "Magha" },
+                    { date: "February 20, 2025", muhurat: "06:55 AM to 06:54 AM, Feb 21", nakshatra: "Vishakha" }
+                ],
+                March: [
+                    { date: "March 6, 2025", muhurat: "12:05 AM to 06:40 AM, Mar 7", nakshatra: "Mrigashirsha" },
+                    { date: "March 13, 2025", muhurat: "06:33 AM to 06:19 AM, Mar 14", nakshatra: "Purva Phalguni" },
+                    { date: "March 20, 2025", muhurat: "06:25 AM to 11:31 PM", nakshatra: "Anuradha" }
+                ],
+                April: [
+                    { date: "April 3, 2025", muhurat: "07:02 AM to 05:51 AM, Apr 4", nakshatra: "Mrigashirsha" },
+                    { date: "April 10, 2025", muhurat: "06:01 AM to 12:24 PM", nakshatra: "Purva Phalguni" },
+                    { date: "April 24, 2025", muhurat: "10:49 AM to 05:46 AM, Apr 25", nakshatra: "Purva Bhadrapada" }
+                ],
+                May: [
+                    { date: "May 1, 2025", muhurat: "05:40 AM to 14:21 PM", nakshatra: "Mrigashirsha" },
+                    { date: "May 15, 2025", muhurat: "14:07 PM to 05:30 AM, May 16", nakshatra: "Mula" },
+                    { date: "May 22, 2025", muhurat: "05:27 AM to 17:47 PM", nakshatra: "Purva Bhadrapada" }
+                ],
+                June: [
+                    { date: "June 12, 2025", muhurat: "05:23 AM to 05:23 AM, Jun 13", nakshatra: "Mula" },
+                    { date: "June 19, 2025", muhurat: "11:17 PM to 05:24 AM, Jun 20", nakshatra: "Revati" },
+                    { date: "June 26, 2025", muhurat: "08:46 AM to 05:25 AM, Jun 27", nakshatra: "Punarvasu" }
+                ]
+            };
+
+        // Prevent form submission and display the result based on the selected month
+        document.getElementById('muhuratForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            const selectedMonth = document.getElementById('month-select').value;
+            const monthResult = document.getElementById('month-result');
+
+            if (muhuratData[selectedMonth]) {
+                let resultHTML = `<h2>Auspicious Muhurat in ${selectedMonth}</h2>`;
+                muhuratData[selectedMonth].forEach(muhurat => {
+                    resultHTML += `<p><strong>Date:</strong> ${muhurat.date} - <strong>Muhurat:</strong> ${muhurat.muhurat}, <strong>Nakshatra:</strong> ${muhurat.nakshatra}</p>`;
+                });
+                monthResult.innerHTML = resultHTML;
+            } else {
+                monthResult.innerHTML = `<p>No data available for ${selectedMonth}</p>`;
+            }
+        });
+
+        function openTab(event, tabId) {
+            const tabs = document.querySelectorAll('.tab-content');
+            const tabLinks = document.querySelectorAll('.tab-link');
+
+            tabs.forEach(tab => tab.classList.remove('active'));
+            tabLinks.forEach(link => link.classList.remove('active'));
+
+            document.getElementById(tabId).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+</body>
+</html>
+
+
